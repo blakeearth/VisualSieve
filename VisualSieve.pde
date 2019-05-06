@@ -1,5 +1,6 @@
 int focusX;
 int focusY;
+final int mouseWheelZoom = 1;
 Plot p;
 
 public void setup() {
@@ -35,4 +36,16 @@ public void mouseDragged() {
 
 public void mouseReleased() {
   cursor(HAND);
+}
+
+public void mouseWheel(MouseEvent event) {
+  int add = 0;
+  if (event.getCount() < 0) {
+    add = mouseWheelZoom;
+  }
+  else if (event.getCount() > 0) {
+    add = -mouseWheelZoom;
+  }
+  
+  p.zoom(add);
 }

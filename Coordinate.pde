@@ -22,8 +22,8 @@ class Coordinate<X extends Comparable<X>, Y extends Comparable<Y>> implements Co
     return y;
   }
   
-  public void setAge(int age) {
-    if (age <= 127) this.age = age;
+  public void update() {
+    if (age <= 126) age++;
   }
   
   public int getAge() {
