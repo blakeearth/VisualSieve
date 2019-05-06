@@ -162,7 +162,6 @@ class Plot {
           
           stroke(2 * next.getAge());
           line(previousConverted.getX(), previousConverted.getY(), nextConverted.getX(), nextConverted.getY());
-          line(previousConverted.getX(), -previousConverted.getY(), nextConverted.getX(), -nextConverted.getY());
           
           //draw axes
           Coordinate convertedOrigin = convertToScreen(new Coordinate(0f, 0f));
