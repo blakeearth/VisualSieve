@@ -225,23 +225,11 @@ class Plot {
       c = new Coordinate(newX, newY);
       cs.add(c);
       
-      if (c.isInteger(E) && abs(c.getY()) >= 2 - E) {
-        // this is a non-one or zero whole number point on the parabola
-        addLabel(c.getX(), 0f);
-        addLabel(0f, c.getY());
-        
-        int[] pointColor = new int[3];
-        pointColor[0] = 255;
-        pointColor[1] = 255;
-        pointColor[2] = 255;
-        c.setImportant(true);
-        c.setFill(pointColor);
-      }
-      
       if (abs(c.getX() - floor(c.getX())) < E) {
         addLabel(c.getX(), 0f);
       }
-      else if (abs(c.getY() - floor(c.getY())) < E) {
+      
+      if (abs(c.getY() - floor(c.getY())) < E) {
         addLabel(0f, c.getY());
       }
     }
