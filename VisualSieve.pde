@@ -1,31 +1,26 @@
 int focusX;
 int focusY;
-final int mouseWheelZoom = 1;
+int desiredFrames;
+final int mouseWheelZoom = 3;
 Plot p;
 
 public void setup() {
   fullScreen();
+  background(0);
   cursor(HAND);
   focusX = 0;
   focusY = 0;
   InverseParabola parabola = new InverseParabola();
   p = new Plot(parabola, 30);
-  frameRate(60);
+  desiredFrames = 10;
 }
 
 public void draw() {
-  
+  frameRate(desiredFrames);
+  if (frameCount % 10 == 0) desiredFrames += 1;  
   p.setLocation(focusX, focusY);
   
-  background(0);
   p.display();
-  
-  
-  // thoughts: zooming and/or panning?
-  
-  // draw axes
-  
-  // draw all known (yet) points
 }
 
 public void mouseDragged() {
