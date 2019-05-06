@@ -55,7 +55,7 @@ class Plot {
   }
   
   public Coordinate convertToScreen(Coordinate c) {
-    return new Coordinate(originX + c.getX() * scale, originY + c.getY() * scale);
+    return new Coordinate(originX + c.getX() * scale, originY - c.getY() * scale);
   }
   
   public void addLabel(float x, float y) {

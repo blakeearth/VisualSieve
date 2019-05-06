@@ -5,7 +5,7 @@ final int mouseWheelZoom = 3;
 Plot p;
 
 public void setup() {
-  fullScreen();
+  size(1280, 600);
   background(0);
   cursor(HAND);
   focusX = 0;
