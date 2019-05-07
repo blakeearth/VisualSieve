@@ -97,7 +97,7 @@ class Plot {
             if (c.getY() * otherC.getY() < 0 && abs(otherC.getX()) >= 2 - E) {
               Coordinate convertedCoordinate = convertToScreen(c);
               Coordinate convertedOtherCoordinate = convertToScreen(otherC);
-              stroke(c.getAge() / 4);
+              stroke(c.getAge());
               line(convertedOtherCoordinate.getX(), convertedOtherCoordinate.getY(), convertedCoordinate.getX(), convertedCoordinate.getY());
             }
           }
