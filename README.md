@@ -9,7 +9,7 @@ Not yet added. See https://plus.maths.org/content/catching-primes and http://mat
 
 ## Usage
 ### Jarfile
-To run this visualization, download and execute the jarfile associated with the most recent release (see the [releases page](https://github.com/blakeearth/VisualSieve/releases/)). Read the notes for the version; you might need to install a newer JDK version.
+To run this visualization, download and execute the jarfile associated with the most recent release (see the [releases page](https://github.com/blakeearth/VisualSieve/releases/)). Read the notes for the version; you might need to install a JDK.
 
 ### Processing
 If you would rather run the visualization in Processing, download [Processing](https://processing.org/) and the source code associated with the most recent release (see the [releases page](https://github.com/blakeearth/VisualSieve/releases/)). Extract the source code and open a `.pde` file in the resulting folder to open the Sketch. Then, press the play icon to run.
