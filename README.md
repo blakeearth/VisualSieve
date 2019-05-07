@@ -4,8 +4,30 @@ This project is a simple visual quadratic sieve for catching primes. It's made w
 ## How it looks
 ![Preview](https://blakeearth.github.io/VisualSieve/preview.gif)
 
+math:
+![x=y^2](https://blakeearth.github.io/VisualSieve/math/parabola.PNG)
+![x](https://blakeearth.github.io/VisualSieve/math/x.PNG)
+![y](https://blakeearth.github.io/VisualSieve/math/y.PNG)
+![i X j](https://blakeearth.github.io/VisualSieve/math/i-times-j.PNG)
+![+2 or -2](https://blakeearth.github.io/VisualSieve/math/two.PNG)
+![y=i](https://blakeearth.github.io/VisualSieve/math/y-equals-i.PNG)
+![y=-i](https://blakeearth.github.io/VisualSieve/math/y-equals-negative-i.PNG)
+![i^2](https://blakeearth.github.io/VisualSieve/math/i-squared.PNG)
+![y=-j](https://blakeearth.github.io/VisualSieve/math/y-equals-negative-j.PNG)
+![x/2](https://blakeearth.github.io/VisualSieve/math/x-divided-by-two.PNG)
+
 ## How it works
-Not yet added. See https://plus.maths.org/content/catching-primes and http://mathworld.wolfram.com/QuadraticSieve.html for now.
+1. We start by drawing the parabola ![x=y^2](https://blakeearth.github.io/VisualSieve/math/parabola.PNG). 
+2. Then, we connect each integer point on one branch (above or below the ![x](https://blakeearth.github.io/VisualSieve/math/x.PNG)-axis, starting with ![+2 or -2](https://blakeearth.github.io/VisualSieve/math/two.PNG), since we don't care about multiples of one for finding composites) of the parabola to each integer point on the opposite branch (and vice versa). 
+> Notice that just as the line between the points on the parabola where ![y=i](https://blakeearth.github.io/VisualSieve/math/y-equals-i.PNG) and ![y=-i](https://blakeearth.github.io/VisualSieve/math/y-equals-negative-i.PNG) intersects the ![x](https://blakeearth.github.io/VisualSieve/math/x.PNG)-axis at ![i^2](https://blakeearth.github.io/VisualSieve/math/i-squared.PNG), the line between the points on the parabola where y=i and ![y=-j](https://blakeearth.github.io/VisualSieve/math/y-equals-negative-j.PNG) intersects the ![x](https://blakeearth.github.io/VisualSieve/math/x.PNG)-axis at ![i X j](https://blakeearth.github.io/VisualSieve/math/i-times-j.PNG) (find a nice visual explanation of why this is [here](https://plus.maths.org/content/catching-primes)).
+3. The parabola ![x=y^2](https://blakeearth.github.io/VisualSieve/math/parabola.PNG) has ![x](https://blakeearth.github.io/VisualSieve/math/x.PNG)-values for every integer ![y](https://blakeearth.github.io/VisualSieve/math/y.PNG), so as we draw this parabola and connect the points on it as described, we draw lines that intersect the ![x](https://blakeearth.github.io/VisualSieve/math/x.PNG)-axis at every composite number. 
+4. When we find a new intersection like this, we mark the point on the ![x](https://blakeearth.github.io/VisualSieve/math/x.PNG)-axis blue and stop checking it since we know it's composite. 
+5. When our current maximum ![y](https://blakeearth.github.io/VisualSieve/math/y.PNG)-value exceeds anything that could be a factor of a given ![x](https://blakeearth.github.io/VisualSieve/math/x.PNG) (defined for this visualization as anything greater than ![x/2](https://blakeearth.github.io/VisualSieve/math/x-divided-by-two.PNG)), we mark it green and can be certain that it's prime.
+
+### Sources and further reading
+This visual sieve was invented by Russian mathemeticians Yuri Matiyasevich and Boris Stechkin.
+1. [A visual explanation of why we cross the points we do (and more about this sieve)](https://plus.maths.org/content/catching-primes)
+2. [A brief explanation of quadratic sieves, including the visual sieve](http://mathworld.wolfram.com/QuadraticSieve.html)
 
 ## Usage
 ### Jarfile
