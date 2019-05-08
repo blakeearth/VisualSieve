@@ -1,6 +1,9 @@
 # VisualSieve
 This project is a simple visual quadratic sieve for catching primes. It's made with [Processing](https://processing.org/), a language and IDE built on Java designed to make it easier to code and draw with code.
 
+## Purpose
+This project gives a visual way to generate primes by sieving out all composite numbers up to a given number (represented in this visualization by the highest integer on the y-axis times two). This leaves us with primes. Composites are blue, and primes are green.
+
 ## How it looks
 ![Preview](https://blakeearth.github.io/VisualSieve/preview.gif)
 
